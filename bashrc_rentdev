@@ -1,0 +1,55 @@
+if [ -f ~/.bashrc_work ]; then
+    . ~/.bashrc_work
+fi
+
+# Specific to Rentdev
+
+export RTK_SUBSYSTEM=insider
+export RTK_SUBSYSTEM_PATH=/data_storage/apps/ppt/current
+export ORACLE_HOME=/u01/app/oracle/product/10.2.0-client
+
+export SVNROOT="svn+ssh://cvsuser@rtksvn"
+
+alias dlb='cd /dp/local/bin'
+ddlb() { cd /dp/local/bin/$@.dir; }
+alias trunk='cd ~/work/trunk/ppt_src'
+alias vless='vim -u /usr/share/vim/vim72/macros/less.vim'
+alias cdjava="cd /home/dam/work/ppt_java/src/com/rentrak/"
+
+CDPATH=( .\
+:/usr/local\
+:/dp/local/bin\
+:/dp/local\
+:/home\
+:$HOME/work/trunk/ppt_src\
+:$HOME/work/trunk/ppt_src/libsrc\
+:$HOME/work/trunk/ppt_src/prod_src\
+:$HOME/work/trunk/ppt_src/*_src\
+:$HOME/work/trunk/ppt_src/*/*_group\
+:$HOME/work/trunk/ppt_src/shell/*\
+:$HOME/work/trunk/ppt_src/shell/*/*\
+:$HOME )
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/dam/lib
+
+function svnd(){
+    svn diff "$@" --diff-cmd diff -x -bU500 | diff_painter.pl | less -R '+/^[-+*]'
+}
+
+export PERL5LIB=/data_storage/apps/ppt/current/perl_lib:/data_storage/local/numa_perl
+export ANT_HOME=/usr/local/ant/apache-ant-1.5.4
+export JAVA_HOME=/usr/java/jdk1.3.1_16
+alias ant="usr/local/ant/apache-ant-1.5.4/bin/ant"
+export ANT_RTKDIR="$HOME/work/testing-java"
+export ANT_WORKDIR=~/work/trunk/java_src
+
+# aliases for accessing Perl programs
+function cdp(){
+    dir=$(echo $1 | tr -s ":" "/")
+    cd $dir
+}
+
+function vip(){
+    file=$(echo $1 | tr -s ":" "/")
+    vi ${file}.pm
+}

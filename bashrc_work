@@ -1,0 +1,31 @@
+#specific to Vobile
+
+export GITROOT=ssh://git@pptgit.pdx.vobile.net:2222
+export GITROOT_RO=git://pptgit.pdx.vobile.net:2222
+export EDITOR=vi
+# alias achk="ssh mailrouter 'cat /etc/postfix/aliases' | grep -i "
+# alias uchk="ssh mailrouter 'cat /etc/postfix/useraliases' | grep -i "
+# alias vchk="ssh mailrouter 'cat /etc/postfix/virtual' | grep -i "
+alias ulb='cd /usr/local/bin'
+alias cdl='cd $LOGDIR'
+alias tle='cd $LOCETC'
+alias temp='cd ~/work/temp'
+
+export SQLPATH="$HOME:$SQLPATH"
+
+# Run diff and add some color
+function diffp(){
+    diff -x -bU500 "$@" | diff_painter.pl | less -R '+/^[-+*]'
+}
+
+function man() {
+    env LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+    LESS_TERMCAP_md=$(printf "\e[1;31m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    LESS_TERMCAP_us=$(printf "\e[1;32m") \
+    man "$@"
+}
+
