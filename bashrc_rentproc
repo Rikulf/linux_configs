@@ -1,0 +1,13 @@
+if [ -f ~/.bashrc_work ]; then
+    . ~/.bashrc_work
+fi
+
+# Specific to Rentproc
+
+export RTK_SUBSYSTEM=insider
+export RTK_SUBSYSTEM_PATH=/data_storage/apps/ppt/current
+export ORACLE_HOME=/u01/app/oracle/product/10.2.0-client
+
+alias vless='vim -u /usr/share/vim/vim72/macros/less.vim'
+
+export PERL5LIB=/data_storage/apps/ppt/current/perl_lib:/data_storage/local/numa_perl
