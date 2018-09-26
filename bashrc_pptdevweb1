@@ -1,0 +1,18 @@
+if [ -f ~/.bashrc_work ]; then
+    . ~/.bashrc_work
+fi
+
+# Specific to Pptdevweb1
+
+export RTK_SUBSYSTEM=insider
+export RTK_SUBSYSTEM_PATH=/data_storage/apps/ppt/current
+export ORACLE_HOME=/u01/app/oracle/product/10.2.0-client
+
+CDPATH=( .\
+:/usr/local\
+:/home\
+:$HOME )
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/dam/lib
+
+alias python3='/usr/bin/python34'
