@@ -27,6 +27,8 @@ export HISTFILESIZE=200000
 # include time of commands in history
 export HISTTIMEFORMAT="%d/%m/%y %T "
 
+# make vim the default editor
+export EDITOR=vim
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
