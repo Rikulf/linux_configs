@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/mnt/nfs/vol_na1_pptdevweb1_nfs/mounts/data_storage/work/jgk/one-offs/tools/db_validation/diffs/rtkdev-20170911'
+let g:netrw_dirhist_2='/mnt/nfs/vol_na1_pptdevweb1_nfs/mounts/data_storage/work/jgk/one-offs/tools/db_validation/diffs/weblive-20170912'
+let g:netrw_dirhist_3='/mnt/nfs/vol_na1_pptdevweb1_nfs/mounts/data_storage/work/jgk/one-offs/tools/db_validation/diffs/retail-20180305'
