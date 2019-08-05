@@ -102,6 +102,9 @@ fi
 
 unset color_prompt
 
+if [ -f ~/.bashrc_work ]; then
+    . ~/.bashrc_work
+fi
 
 if [ -f ~/.bashrc_local ]; then
     . ~/.bashrc_local
