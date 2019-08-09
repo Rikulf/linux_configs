@@ -1,3 +1,9 @@
 alias cdlog="cd /var/log/supervisor/tvod-sftp_sync_service"
 alias cdftp="cd /storage/tvod/sftp/supplier/"
 alias cdgcs="cd /storage/tvod/storage/gcs/vobile-tvod/"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/storage/home/dmartin/work/tvod/google-cloud-sdk/path.bash.inc' ]; then . '/storage/home/dmartin/work/tvod/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/storage/home/dmartin/work/tvod/google-cloud-sdk/completion.bash.inc' ]; then . '/storage/home/dmartin/work/tvod/google-cloud-sdk/completion.bash.inc'; fi
