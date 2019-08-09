@@ -45,8 +45,6 @@ endif
 
 let &path.="/usr/local/include,"
 
-" Will show tabs (as opposed to spaces) and trailing whitespaces.  The >> and . parts are actually special characters so copy/paste them.
-set listchars=tab:»·,trail:·
 " This will cause new tabs to be spaces.
 set expandtab
 " Make tabs be 4 chars.
@@ -56,7 +54,7 @@ set ts=4
 set ai
 set si
 set smarttab
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set listchars=tab:>-,trail:~,extends:>,precedes:<
 :syntax on
 
 " Change colorscheme if using vimdiff
