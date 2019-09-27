@@ -16,7 +16,7 @@ Note that I chose the name "my-plugins". Vim 8 doesn't care what that folder is 
 
 Update your local copies of the plugins.
 
- git submodule update --remote --merge
+ git submodule update --remote --merge --recursive
 
 Then copy the .vim folder into $HOME.
 
