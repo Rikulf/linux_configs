@@ -1,15 +1,12 @@
-[submodule "vim/.vim/vim/.vim/bundle/jedi-vim"]
-	path = vim/.vim/vim/.vim/bundle/jedi-vim
+[submodule "vim/.vim/pack/my-plugins/start/jedi-vim"]
+	path = vim/.vim/pack/my-plugins/start/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim
-[submodule "vim/.vim/bundle/jedi-vim"]
-	path = vim/.vim/bundle/jedi-vim
-	url = https://github.com/davidhalter/jedi-vim
-[submodule "vim/.vim/bundle/bufexplorer.vim"]
-	path = vim/.vim/bundle/bufexplorer.vim
-	url = https://github.com/jlanzarotta/bufexplorer
-[submodule "vim/.vim/bundle/gundo"]
-	path = vim/.vim/bundle/gundo
-	url = https://github.com/sjl/gundo.vim
-[submodule "vim/.vim/bundle/syntastic"]
-	path = vim/.vim/bundle/syntastic
+[submodule "vim/.vim/pack/my-plugins/start/syntastic"]
+	path = vim/.vim/pack/my-plugins/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic
+[submodule "vim/.vim/pack/my-plugins/start/gundo"]
+	path = vim/.vim/pack/my-plugins/start/gundo
+	url = https://github.com/sjl/gundo.vim
+[submodule "vim/.vim/pack/my-plugins/start/bufexplorer.vim"]
+	path = vim/.vim/pack/my-plugins/start/bufexplorer.vim
+	url = https://github.com/jlanzarotta/bufexplorer
