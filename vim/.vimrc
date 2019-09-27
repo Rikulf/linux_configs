@@ -1,22 +1,5 @@
 set nocp
 
-runtime! autoload/pathogen.vim
-if exists('*pathogen#infect')
-    execute pathogen#infect()
-    call pathogen#helptags()
-endif
-" Only needed for Rentrak reasonably_stable_mappings.vim
-if exists("g:loaded_pathogen")
-    let list = []
-    for dir in pathogen#split(&rtp)
-        if dir !~# '/usr/share/vim/vimfiles'
-            call add(list, dir)
-        endif
-    endfor
-    let &rtp = pathogen#join(list)
-endif
-
-
 filetype plugin indent on
 " |_ Set <Leader> to , AND \
 let mapleader = "\\"
