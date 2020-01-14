@@ -78,13 +78,13 @@ function exstat {
     GREEN="\[\e[32;1m\]"
     CYAN="\[\e[36;1m\]"
     OFF="\[\033[m\]"
-	PRMPT="${USER}@${HOSTNAME} ${PWD}"
+    PRMPT="${USER}@${HOSTNAME} ${PWD}"
 
     if [ "${EXSTAT}" -eq 0 ]
     then
-         PS1="${GREEN}${PRMPT}>${OFF} "
+         PS1="${GREEN}${PRMPT}>${OFF}"
     else
-         PS1="${RED}${PRMPT}>${OFF} "
+         PS1="${RED}${PRMPT}>${OFF}"
     fi
 }
 case "$TERM" in
@@ -95,9 +95,9 @@ case "$TERM" in
 esac
 
 if [ "$color_prompt" = yes ]; then
-    PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$$PS1"
+    PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$$PS1 "
 else
-    PS1="\u@\h:\w\$$PS1"
+    PS1="\u@\h:\w\$$PS1 "
 fi
 
 unset color_prompt
